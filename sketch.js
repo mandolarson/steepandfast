@@ -1,17 +1,26 @@
-let xLoc = 50;
-let xSpeed = 1;
-
 function setup() {
-  createCanvas(400, 400);
-}
-
-function draw() {
-  xLoc = xLoc +xSpeed;
-  if(xLoc > width - 50 || xLoc < 50){
-    xSpeed = xSpeed * -1;
-  }
-  background(200, 250, 60);
+  createCanvas(600, 600);
+  background(0);
+  fill(255);
   noStroke();
-  fill(225, 15, 100);
-  ellipse(xLoc, height/2, 100, 100);
+
+  const staffX = width / 2;
+  const staffY = height * 0.1;
+  const staffSize = width * 0.2;
+
+  translate(staffX, staffY);
+
+  // Staff
+  triangle(-(staffSize / 5), 0, staffSize / 3, 0, 0, staffSize * 4);
+
+  // Wing 1
+  triangle(staffX, staffY, staffSize, 10, 10, staffSize);
+
+  // Wing 2
+  triangle(-staffX, staffY, -staffSize, 10, 10, staffSize);
+
+  // Top of staff
+  ellipse(staffX / 1.8, staffY - 78, 80, 80);
+
+  noLoop();
 }
