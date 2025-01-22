@@ -1,26 +1,29 @@
 function setup() {
   createCanvas(600, 600);
+}
+
+function draw() {
   background(0);
-  fill(255);
-  noStroke();
-
-  const staffX = width / 2;
-  const staffY = height * 0.1;
-  const staffSize = width * 0.2;
-
-  translate(staffX, staffY);
-
-  // Staff
-  triangle(-(staffSize / 5), 0, staffSize / 3, 0, 0, staffSize * 4);
-
-  // Wing 1
-  triangle(staffX, staffY, staffSize, 10, 10, staffSize);
-
-  // Wing 2
-  triangle(-staffX, staffY, -staffSize, 10, 10, staffSize);
-
-  // Top of staff
-  ellipse(staffX / 1.8, staffY - 78, 80, 80);
-
-  noLoop();
+  
+  noStroke();  
+  
+beginShape();
+  vertex(280, 100);
+  vertex(320, 100);
+  vertex(300, 580);
+endShape(CLOSE)
+  
+beginShape();
+  vertex(375, 100);
+  vertex(590, 160);
+  vertex(300, 200);
+endShape(CLOSE)
+  
+beginShape();
+  vertex(225, 100);
+  vertex(10, 160);
+  vertex(300, 200);
+endShape(CLOSE)  
+  
+ellipse(400, 77, 60, 60);  
 }
