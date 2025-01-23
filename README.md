@@ -1,5 +1,5 @@
 # steep and fast
-## my interperetation of the prompt "steep and fast" inspired by Greek mythology
+## my interperetation of the prompt "steep and fast" inspired by 2 Greek myths
 ### view a live version at https://mandolarson.github.io/steepandfast/
 
 Some basic Git commands are:
